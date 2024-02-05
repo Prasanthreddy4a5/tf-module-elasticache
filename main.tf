@@ -15,7 +15,7 @@ resource "aws_security_group" "main" {
   description = "${local.name_prefix}-sg"
   vpc_id      = var.vpc_id
   tags        = merge(local.tags, { Name = "${local.name_prefix}-sg" })
-git
+
   ingress {
     description = "ELASTICACHE"
     from_port   = var.port
